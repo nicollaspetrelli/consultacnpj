@@ -8,16 +8,13 @@ $(document).ready(function () {
     }
   });
 
-  $('#cep').mask('00000-000', {reverse: false});
+  //$('#cep').mask('00000-000', {reverse: false});
   $('#cnpj').mask('00.000.000/0000-00', {reverse: false});
 
   $('form').validate({
     rules: {
         cnpj: {
             cnpjBR: true // Método do additional-methods
-        },
-        email: {
-            email: true // Método do additional-methods
         }
     }
   })
@@ -73,10 +70,9 @@ function preencheCampos(dados) {
     $('#number').val(dados.numero)
     $('#complement').val(dados.complemento)
     $('#district').val(dados.bairro)
-    $('#cep').val(dados.cep)
+    $('#zipcode').val(dados.cep)
     $('#city').val(dados.municipio)
     $('#UF').val(dados.uf)
-
     $('#email').val(dados.email)
     $('#telephone').val(dados.telefone)
 }
